@@ -1,0 +1,163 @@
+:root{
+    /* color */
+    --column1bgc: hsl(31, 77%, 52%);
+    --column2bgc: hsl(184, 100%, 22%);
+    --column3bgc: hsl(179, 100%, 13%);
+
+    --contentcolor: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+    /* mainbgc, titlecolor, buttonsbgc = veryLightGray*/
+
+
+    /* font */
+    --contentfont: "Lexend Deca", sans-serif; 
+    --titlefont: "Big Shoulders Display", sans-serif;
+    /* fontweight: 'content: 400' , 'title: 700' */
+    /* fontsize: 15px */
+
+    /* width: 'mobile:375px' , 'desktop: 1440px' */
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: var(--veryLightGray);
+}
+.container{
+    max-width: 50rem;
+}
+.previewCard{
+    display: flex;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.column{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.column1{
+    background-color: var(--column1bgc);
+}
+.column2{
+    background-color: var(--column2bgc);
+
+}
+.column3{
+    background-color: var(--column3bgc); 
+}
+
+.circle{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+#cc1::after{
+    content:"";
+    background-image: url(https://raw.githubusercontent.com/tina801005/challenge12/6c21073684eeae5615b6d300c6b458db278df03f/images/icon-sedans.svg);
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+#cc2::after{
+    content:"";
+    background-image: url(https://raw.githubusercontent.com/tina801005/challenge12/6c21073684eeae5615b6d300c6b458db278df03f/images/icon-suvs.svg);
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+#cc3::after{
+    content:"";
+    background-image: url(https://raw.githubusercontent.com/tina801005/challenge12/6c21073684eeae5615b6d300c6b458db278df03f/images/icon-luxury.svg);
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+.title{
+    font-family: var(--titlefont);
+    color: var(--veryLightGray);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.content{
+    font-family: var(--contentfont);
+    color: var(--contentcolor);
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+.learnMorebtn{
+    background: var(--veryLightGray);
+    border-radius: 1.5rem;
+    padding: 0.6rem;
+    font-family: var(--contentfont);
+    width: 60%;
+    border: none;
+    margin: 2rem 0;
+    border: solid 2px hsla(0, 0%, 95%,0);
+}
+
+#colbtn1{
+    color: var(--column1bgc);
+    &:hover{
+        cursor: pointer;
+        background-color: var(--column1bgc);
+        border: solid 2px hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 95%);
+    }
+}
+#colbtn2{
+    color: var(--column2bgc);
+    &:hover{
+        cursor: pointer;
+        background-color: var(--column2bgc);
+        border: solid 2px hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 95%);
+    }
+}
+#colbtn3{
+    color: var(--column3bgc);
+    &:hover{
+        cursor: pointer;
+        background-color: var(--column3bgc);
+        border: solid 2px hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 95%);
+    }
+}
+
+@media screen and (max-width: 375px){
+    body{
+        padding: 1rem;
+    }
+    .previewCard{
+        flex-direction: column;
+    }
+}
